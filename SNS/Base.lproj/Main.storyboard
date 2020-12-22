@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SNS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="wM0-TJ-Byw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlM-NM-TgP">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="KnU-XV-3Uk">
+                                        <connections>
+                                            <action selector="showActivityView:" destination="BYZ-38-t0r" id="m31-cB-qQ7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wM0-TJ-Byw" firstAttribute="trailing" secondItem="NlM-NM-TgP" secondAttribute="trailing" id="Aln-2d-I3q"/>
+                            <constraint firstItem="NlM-NM-TgP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="808" id="Qg7-Uq-KnY"/>
+                            <constraint firstItem="wM0-TJ-Byw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U7z-aA-IYQ"/>
+                            <constraint firstItem="wM0-TJ-Byw" firstAttribute="leading" secondItem="NlM-NM-TgP" secondAttribute="leading" id="YpJ-iF-zeN"/>
+                            <constraint firstItem="wM0-TJ-Byw" firstAttribute="bottom" secondItem="NlM-NM-TgP" secondAttribute="bottom" id="Z43-oz-5Wi"/>
+                            <constraint firstItem="wM0-TJ-Byw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="i3O-1i-5Kf"/>
+                            <constraint firstItem="wM0-TJ-Byw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iWx-fW-C5j"/>
+                            <constraint firstItem="NlM-NM-TgP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sUr-ek-2c0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="wM0-TJ-Byw" id="UrE-O4-Vba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="682" height="1021.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
